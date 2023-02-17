@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Home from './pages/Home';
+import Sets from './pages/Sets/sets';
+import SignUp from './pages/SignUp/signup';
+import Test from './pages/Test/test';
+import Create from './pages/Create/create';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+return (
+    <Router>
+    <Navbar />
+    <Routes>
+        {/*created to home paths one for right when you start page other for the link not sure if that is proper way? */}
+        <Route path='/' element={<Home />} />
+        <Route path='/home' element={<Home />} />
+        <Route path='/sets' element={<Sets/>} />
+        <Route path='/create' element={<Create />} />
+        <Route path='/test' element={<Test />} />
+        <Route path='/sign-up' element={<SignUp/>} />
+    </Routes>
+    </Router>
+);
 }
-
+  
 export default App;
