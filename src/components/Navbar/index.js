@@ -20,7 +20,7 @@ const Navbar = () => {
             Create+
           </NavLink>
           {/*testing what to do if in folder*/}
-          <NavLink to="/test" activeStyle>Testing branch</NavLink>
+          <NavLink to="/test" activeStyle>Testing</NavLink>
           <NavLink to="/sign-up" activeStyle>
             Sign Up 
           </NavLink>
