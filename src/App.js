@@ -13,7 +13,7 @@ return (
     <Router>
     <Navbar />
     <Routes>
-        {/*created to home paths one for right when you start page other for the link not sure if that is proper way? */}
+        {/*created 2 home paths one for when you start page other for the link not sure if that is proper way? */}
         <Route path='/' element={<Home />} />
         <Route path='/home' element={<Home />} />
         <Route path='/sets' element={<Sets/>} />
