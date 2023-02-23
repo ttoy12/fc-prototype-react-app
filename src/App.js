@@ -16,10 +16,11 @@ return (
         {/*created 2 home paths one for when you start page other for the link not sure if that is proper way? */}
         <Route path='/' element={<Home />} />
         <Route path='/home' element={<Home />} />
-        <Route path='/sets' element={<Sets/>} />
+        <Route path='/sets' element={<Sets />} />
         <Route path='/create' element={<Create />} />
         <Route path='/test' element={<Test />} />
         <Route path='/sign-up' element={<SignUp/>} />
+        <Route path='*' component={<Home />} />
     </Routes>
     </Router>
 );

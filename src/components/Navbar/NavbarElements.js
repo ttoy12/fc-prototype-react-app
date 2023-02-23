@@ -19,15 +19,14 @@ export const NavLink = styled(Link)`
   align-items: center;
   text-decoration: none;
   padding: 0 1rem;
-  height: 100%;
   cursor: pointer;
   &.active {
     color: darkMagenta;
   }
   &:first-child {
     font-family: 'Londrina Solid', sans-serif;
-    font-size: 2.5rem;
-
+    font-size: 3rem;
+    color: white;
   }
 `;
   
