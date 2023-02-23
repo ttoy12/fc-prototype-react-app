@@ -2,11 +2,12 @@ import { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next';
 import { MongoClient,ObjectId } from 'mongodb';
 import axios from 'axios';
 import React from 'react';
-export type Customer = {
+
+export type Customer = 
+{
     _id: ObjectId;
     name: string;
 }
-
 export const getStaticProps: GetStaticProps = async(context)=>{
     const mongoClient = new MongoClient('mongodb+srv://ialsanto:pZA9lGjyKDkqqgvy@customers.q2nfot5.mongodb.net/?retryWrites=true&w=majority')
     const data = await mongoClient
@@ -28,7 +29,7 @@ export const getStaticProps: GetStaticProps = async(context)=>{
                 revalidate: 60,
         };
     };
-const Customers: NextPage = ({
+export const Customers: NextPage = ({
     customers,
     }: InferGetStaticPropsType<typeof getStaticProps>) => {
     return (
@@ -39,9 +40,8 @@ const Customers: NextPage = ({
                     <div key={customer._id.toString()}>
                     <p>{customer.name}</p>
                     <p>{customer._id.toString()}</p>
-                    </div>
-                    );
-                    })} 
+                    </div>);
+                })} 
         </>
     );
 };
